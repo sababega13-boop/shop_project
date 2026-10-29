@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ჩემი მაღაზია</title>
+</head>
+<body>
+    <header>
+        <h1>ჩემი ტექნიკის მაღაზია</h1>
+        <nav>
+            <a href="{% url 'home' %}">მთავარი</a> |
+            <a href="{% url 'products' %}">პროდუქტები</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'shop_app/base.html' %}
+
+{% block content %}
+    <h2>პროდუქტების სია</h2>
+    <ul>
+        {% for p in products %}
+            <li>
+                <strong>{{ p.name }}</strong> - {{ p.price }} GEL
+                -
+                {% if p.price > 500 %}
+                    <span style="color: red;">ძვირადღირებული პროდუქტია</span>
+                {% else %}
+                    <span style="color: green;">ბიუჯეტური პროდუქტია</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
